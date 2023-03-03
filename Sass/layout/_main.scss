@@ -1,0 +1,55 @@
+@use '../abstract/variables' as vars;
+@use '../abstract/mixins';
+.main-section {
+    padding-top: 5rem;
+    padding-bottom: 2rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-section__info {
+    .info-title {
+        font: {
+            size: 2.5rem;
+            weight: 700;
+        }
+        color: vars.$title-color;
+        padding-top: 1.25rem;
+    }
+    .info-description {
+        max-width: 500px;
+        padding: {
+            top: 1.88rem; 
+        }
+        line-height: 1.56rem;
+        color: vars.$primary-text-color;
+
+    }
+    .info-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        font-size: 18px;
+        text-transform: capitalize;
+        background-color: vars.$dow-bnt-color;
+        border-radius: 4px;
+        color: white;
+        margin-top: 1.25rem;
+        @include mixins.transition-ease;
+        &:hover {
+            background-color: #d84c4c;
+        }
+    }
+}
+
+.circle {
+    position: relative;
+    width: 245px;
+    height: 255px;
+    border-radius: 50%;
+    background-color: vars.$post-bg-color;
+    img {
+        position: absolute;
+        top: 2px;
+    }
+}

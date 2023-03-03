@@ -1,0 +1,37 @@
+@use '../abstract/mixins';
+@use '../abstract/variables' as vars;
+
+header {
+    .btn-close, .btn-bars {
+        display: none;
+    }
+}
+.nav {   
+    .nav-menu {
+        display: flex;
+        padding-top: 20px;
+        padding-left: 75vw;
+        z-index: 100;
+    }
+  
+    li {
+        display: inline-block;
+        list-style: none;
+        padding: 0 20px;
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            color: vars.$title-color;
+        }
+    }
+}
+
+.ds {
+    display: none;
+}
+
+.db {
+    display: block;
+}
+
